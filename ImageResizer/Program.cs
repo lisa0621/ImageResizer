@@ -24,24 +24,24 @@ namespace ImageResizer
             Console.WriteLine($"原始花費時間: {sw.ElapsedMilliseconds} ms");
             sw.Stop();
 
-            imageProcess.Clean(destinationPath);
-            sw.Restart();
-            imageProcess.ResizeImagesTask(sourcePath, destinationPath, 2.0);
-            sw.Stop();
-            Console.WriteLine($"Task: {sw.ElapsedMilliseconds} ms");
+            //imageProcess.Clean(destinationPath);
+            //sw.Restart();
+            //imageProcess.ResizeImagesTask(sourcePath, destinationPath, 2.0);
+            //sw.Stop();
+            //Console.WriteLine($"Task: {sw.ElapsedMilliseconds} ms");
 
-            imageProcess.Clean(destinationPath);
-            sw.Restart();
-            await imageProcess.ResizeImagesAsync(sourcePath, destinationPath, 2.0);
-            sw.Stop();
-            Console.WriteLine($"Async花費時間: {sw.ElapsedMilliseconds} ms");
+            //imageProcess.Clean(destinationPath);
+            //sw.Restart();
+            //await imageProcess.ResizeImagesAsync(sourcePath, destinationPath, 2.0);
+            //sw.Stop();
+            //Console.WriteLine($"Async花費時間: {sw.ElapsedMilliseconds} ms");
 
-            imageProcess.Clean(destinationPath);
-            sw.Restart();
-            imageProcess.ResizeImagesParallel(sourcePath, destinationPath, 2.0);
-            sw.Stop();
+            //imageProcess.Clean(destinationPath);
+            //sw.Restart();
+            //imageProcess.ResizeImagesParallel(sourcePath, destinationPath, 2.0);
+            //sw.Stop();
 
-            Console.WriteLine($"Parallel花費時間: {sw.ElapsedMilliseconds} ms");
+            //Console.WriteLine($"Parallel花費時間: {sw.ElapsedMilliseconds} ms");
 
             imageProcess.Clean(destinationPath);
             sw.Restart();
@@ -50,12 +50,12 @@ namespace ImageResizer
 
             Console.WriteLine($"ParallelForEach花費時間: {sw.ElapsedMilliseconds} ms");
 
-            imageProcess.Clean(destinationPath);
-            sw.Restart();
-            await imageProcess.ResizeImagesParallelForEachNest(sourcePath, destinationPath, 2.0);
-            sw.Stop();
+            //imageProcess.Clean(destinationPath);
+            //sw.Restart();
+            //await imageProcess.ResizeImagesParallelForEachNest(sourcePath, destinationPath, 2.0);
+            //sw.Stop();
 
-            Console.WriteLine($"ResizeImagesParallelForEachNest花費時間: {sw.ElapsedMilliseconds} ms");
+            //Console.WriteLine($"ResizeImagesParallelForEachNest花費時間: {sw.ElapsedMilliseconds} ms");
         }
     }
 }
