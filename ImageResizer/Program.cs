@@ -50,6 +50,7 @@ namespace ImageResizer
 
             Console.WriteLine($"ParallelForEach花費時間: {sw.ElapsedMilliseconds} ms");
 
+            imageProcess.Clean(destinationPath);
             sw.Restart();
             await imageProcess.ResizeImagesParallelForEachNest(sourcePath, destinationPath, 2.0);
             sw.Stop();
